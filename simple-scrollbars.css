@@ -1,0 +1,32 @@
+/*
+Simple Scrollbar override for all pages in (Vivaldi) Desktop Browsers
+By CaminaShell 2025.03.27 - github.com/caminashell/simple-scrollbars
+Requirements: Stylebot Extension v3.1+
+Tested on Vivaldi 7.2.3621.71 (Stable channel) (64-bit) 
+Create a new style with * (wildcard) as URL, copy & paste the code in.
+*/
+
+*::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+
+*::-webkit-scrollbar-button {
+  display: none;
+}
+
+*::-webkit-scrollbar-corner, ::-webkit-scrollbar-resize {
+  background-color: #ff0000; /* if this shows, need refinement */
+}
+
+*::-webkit-scrollbar-thumb {
+  border: 1px solid transparent;
+  background-clip: padding-box;
+  background-color: #A3A8B0;
+  border-radius: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: transparent !important;
+}
+
