@@ -7,8 +7,8 @@ Create a new style with * (wildcard) as URL, copy & paste the code in.
 */
 
 *::-webkit-scrollbar {
-  height: 10px;
-  width: 10px;
+  height: 8px;
+  width: 8px;
 }
 
 *::-webkit-scrollbar-button {
@@ -16,20 +16,24 @@ Create a new style with * (wildcard) as URL, copy & paste the code in.
 }
 
 *::-webkit-scrollbar-corner, ::-webkit-scrollbar-resize {
-  background-color: transparent !important;
+  background-color: transparent;
 }
 
 *::-webkit-scrollbar-thumb {
-  border: 1px solid transparent;
+  border: none;
   background-clip: padding-box;
-  background-color: #A3A8B0;
+  background-color: rgba(163,168,176,.5);
   border-radius: 8px;
 }
 
+*::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(163,168,176,.75);
+}
+
 *::-webkit-scrollbar-track {
-  background-color: transparent !important;
+  background-color: transparent;
 }
 
 * {
-  scrollbar-color: revert !important; /* youtube override */
+  scrollbar-color: revert !important;
 }
