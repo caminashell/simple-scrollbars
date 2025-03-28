@@ -1,10 +1,14 @@
 /*
-Simple Scrollbar override for all pages in (Vivaldi) Desktop Browsers
-By CaminaShell 2025.03.27 - github.com/caminashell/simple-scrollbars
-Requirements: Stylebot Extension v3.1+
-Tested on Vivaldi 7.2.3621.71 (Stable channel) (64-bit) 
-Create a new style with * (wildcard) as URL, copy & paste the code in.
-*/
+ * Simple Scrollbar override for all pages in (Vivaldi) Desktop Browsers
+ * By CaminaShell 2025.03.27 - github.com/caminashell/simple-scrollbars
+ * Requirements: Stylebot Extension v3.1+
+ * Tested on Vivaldi 7.2.3621.71 (Stable channel) (64-bit) 
+ * Create a new style with * (wildcard) as URL, copy & paste the code in.
+ */
+
+/*
+ * Legacy WebKit Globals 
+ */
 
 *::-webkit-scrollbar {
   height: 8px;
@@ -24,9 +28,11 @@ Create a new style with * (wildcard) as URL, copy & paste the code in.
   background-clip: padding-box;
   background-color: rgba(163,168,176,.5);
   border-radius: 8px;
+  transition: all 2s ease-in-out
 }
 
 *::-webkit-scrollbar-thumb:hover {
+  --fix: ;
   background-color: rgba(163,168,176,.75);
 }
 
@@ -34,6 +40,11 @@ Create a new style with * (wildcard) as URL, copy & paste the code in.
   background-color: transparent;
 }
 
-* {
+/* 
+ * YouTube scrollbar- fix
+ */
+
+*, #guide-inner-content.ytd-app {
   scrollbar-color: revert !important;
+  scrollbar-width: revert !important;
 }
