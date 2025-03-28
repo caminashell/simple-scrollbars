@@ -16,7 +16,7 @@ Create a new style with * (wildcard) as URL, copy & paste the code in.
 }
 
 *::-webkit-scrollbar-corner, ::-webkit-scrollbar-resize {
-  background-color: #ff0000; /* if this shows, need refinement */
+  background-color: transparent !important;
 }
 
 *::-webkit-scrollbar-thumb {
@@ -30,3 +30,6 @@ Create a new style with * (wildcard) as URL, copy & paste the code in.
   background-color: transparent !important;
 }
 
+* {
+  scrollbar-color: revert !important; /* youtube override */
+}
