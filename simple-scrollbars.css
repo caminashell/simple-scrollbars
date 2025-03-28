@@ -44,7 +44,7 @@
  * YouTube scrollbar- fix
  */
 
-*, #guide-inner-content.ytd-app {
+* {
   scrollbar-color: revert !important;
   scrollbar-width: revert !important;
 }
